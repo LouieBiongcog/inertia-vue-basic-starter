@@ -8,9 +8,7 @@ Route::get('/', function () {
     return inertia('Welcome');
 });
 
-Route::get('/products' , function(){
-    return inertia('Products/Index');
-});
+Route::get('/products' , [ProductController::class , 'index']);
 
 Route::get('/categories' , function(){
     return inertia('Categories/Index');

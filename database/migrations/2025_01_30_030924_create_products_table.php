@@ -16,8 +16,9 @@ return new class extends Migration
             $table -> string('name');
             $table -> string('description')->nullable();
             $table -> bigInteger('category_id')->unsigned();
-            $table -> float('whole_sale_price');
-            $table -> float('retail_price');
+            $table -> decimal('whole_sale_price', 8,2);
+            $table -> decimal('retail_price' , 8 , 2);
+            $table -> string('image');
             $table -> timestamps();
             $table -> foreign('category_id')->references('id')->on('categories');
         });

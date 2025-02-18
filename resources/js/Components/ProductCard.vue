@@ -13,6 +13,8 @@ defineProps({
     <img :src="product.image" :alt="product.name" class="w-full h-64 object-cover rounded-md">
     <h3 class="text-xl font-semibold text-gray-800 mt-4">{{ product.name }}</h3>
     <p class="mt-2 text-gray-600">{{ product.description }}</p>
+    <p class="mt-2 text-gray-600">₱{{ product.whole_sale_price }}</p>
+    <p class="mt-2 text-gray-600">₱{{ product.retail_price }}</p>
     <button class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200">View Details</button>
   </div>
 </template>

@@ -12,9 +12,10 @@ use Inertia\Inertia;
 class ProductController extends Controller
 {
     public function index(){
-        return Inertia::render('Product/Index' , [
-            'products' => Product::with('category') -> get(),
-            'categories' => Category::all()
-        ]);
+
+        $products = Product::all();
+        $categories = Category::all();
+
+        return inertia('Products/Index', compact('products', 'categories'));
     }
 }
